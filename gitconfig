@@ -1,0 +1,14 @@
+[user]
+	email = kevin98gray@gmail.com
+	name = Kevin Chan
+[core]
+	editor = code --wait
+	excludesfile = ~/.gitignore_global
+[diff]
+    tool = vscode
+[difftool]
+    prompt = false
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[commit]
+	template = ~/.git_commit_template.txt

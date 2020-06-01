@@ -1,0 +1,42 @@
+{
+    "extends": ["airbnb", "prettier", "prettier/react"],
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [".js", ".jsx"]
+            }
+        ],
+        "prettier/prettier": [
+            "error",
+            {
+                "trailingComma": "es5",
+                "singleQuote": true,
+                "semi": false,
+                "printWidth": 100,
+                "tabWidth": 4
+            }
+        ],
+        "react/prefer-stateless-function": [
+            0,
+            {
+                "ignorePureComponents": false
+            }
+        ],
+        "no-use-before-define": [0],
+        "react/destructuring-assignment": [0, {}],
+        "react/prop-types": [0, {}],
+        "import/prefer-default-export": [0, {}]
+    },
+    "plugins": ["prettier"],
+    "parser": "babel-eslint"
+}
