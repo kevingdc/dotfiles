@@ -19,9 +19,10 @@
         "prettier/prettier": [
             "error",
             {
+                "arrowParens": "always",
                 "trailingComma": "es5",
-                "singleQuote": true,
-                "semi": false,
+                "singleQuote": false,
+                "semi": true,
                 "printWidth": 100,
                 "tabWidth": 4
             }

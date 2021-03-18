@@ -14,6 +14,5 @@
     ~/.vimrc:
     ~/.zsh:
     ~/.zshrc:
-
-- create:
-    - ~/.nvim
+    ~/.tmux.conf:
+    ~/.unibeautifyrc.yaml:

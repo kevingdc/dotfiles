@@ -1,5 +1,5 @@
 [user]
-	email = kevin98gray@gmail.com
+	email = kevin.gray.chan@gmail.com
 	name = Kevin Chan
 [core]
 	editor = code --wait
@@ -12,3 +12,7 @@
     cmd = code --wait --diff $LOCAL $REMOTE
 [commit]
 	template = ~/.git_commit_template.txt
+[pull]
+	ff = only
+[init]
+	defaultBranch = main

@@ -28,6 +28,6 @@
 #   - Use the body to explain what and why vs. how
 #   - Can use multiple lines with "-" for bullet points in body
 # --------------------
-# For updated template, visit:
+# Adapted from:
 # https://gist.github.com/adeekshith/cd4c95a064977cdc6c50
 # Licence CC
