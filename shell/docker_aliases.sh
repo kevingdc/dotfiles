@@ -1,0 +1,5 @@
+alias dcu="docker-compose up"
+alias dcub="docker-compose up --build"
+alias dcud="docker-compose up -d"
+alias dcudb="docker-compose up -d --build"
+alias dcd="docker-compose down --volumes"

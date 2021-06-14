@@ -1,15 +1,17 @@
 # ls alias
 alias ls="ls -F -G"
 
-# Vagrant aliases
-alias vup="vagrant up"
-alias vssh="vagrant ssh"
-alias vhalt="vagrant halt"
-alias vrel="vagrant reload"
-alias vdes="vagrant destroy"
-
 # Pyenv alias
 alias pya="pyenv activate"
 
+# Vagrant aliases
+source ~/.shell/vagrant_aliases.sh
+
 # Git aliases
 source ~/.shell/git_aliases.sh
+
+# Docker aliases
+source ~/.shell/docker_aliases.sh
+
+# Node aliases
+source ~/.shell/node_aliases.sh

@@ -6,7 +6,6 @@
 - clean: ["~"]
 
 - link:
-    ~/.eslintrc:
     ~/.gitconfig:
     ~/.gitignore_global:
     ~/.git_commit_template.txt:
@@ -15,4 +14,4 @@
     ~/.zsh:
     ~/.zshrc:
     ~/.tmux.conf:
-    ~/.unibeautifyrc.yaml:
+    ~/.config/starship.toml: starship.toml

@@ -1,0 +1,4 @@
+# ~/.config/starship.toml
+
+[vagrant]
+disabled = true

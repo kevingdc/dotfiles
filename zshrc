@@ -12,3 +12,6 @@ source ~/.zsh/prompt.zsh
 
 # Plugins
 source ~/.zsh/plugins.zsh
+
+# Completions
+source ~/.zsh/completions.zsh
