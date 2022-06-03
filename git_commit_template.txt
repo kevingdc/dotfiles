@@ -18,6 +18,10 @@
 #    style    (formatting, missing semi colons, etc; no code change)
 #    docs     (changes to documentation)
 #    test     (adding or refactoring tests; no production code change)
+#    perf     (code change that improves performance)
+#    revert   (revert a commit)
+#    build    (changes that affect the build system)
+#    ci       (changes to the CI configuration files or scripts)
 #    chore    (updating grunt tasks etc; no production code change)
 # --------------------
 # Remember to

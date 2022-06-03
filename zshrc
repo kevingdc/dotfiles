@@ -15,3 +15,6 @@ source ~/.zsh/plugins.zsh
 
 # Completions
 source ~/.zsh/completions.zsh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
