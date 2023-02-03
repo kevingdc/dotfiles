@@ -7,7 +7,7 @@ alias pya="pyenv activate"
 # Xcrun iOS simulator video recording alias
 alias ios-record="xcrun simctl io booted recordVideo"
 
-alias update-sheets="cd ~/Documents/Work/Zaapi/Repositories/zaapi-user-data-scripts && yarn run:all"
+alias cl="printf '\33c\e[3J'"
 
 # Vagrant aliases
 source ~/.shell/vagrant_aliases.sh

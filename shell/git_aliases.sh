@@ -81,8 +81,9 @@ alias gap='git apply'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gbd='git branch -d'
-alias gbda='git branch --no-color --merged | command grep -vE "^(\+|\*|\s*(main|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
+alias gbda='git branch --no-color --merged | command grep -vE "^(\+|\*|\s*(master|main|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
 alias gbD='git branch -D'
+alias gbDa='git branch |  command grep -vE "^(\+|\*|\s*(master|main|develop|dev)\s*$)" | command xargs -n 1 git branch -D'
 alias gbl='git blame -b -w'
 alias gbnm='git branch --no-merged'
 alias gbr='git branch --remote'
@@ -106,7 +107,16 @@ alias gcf='git config --list'
 alias gcl='git clone --recurse-submodules'
 alias gclean='git clean -id'
 alias gpristine='git reset --hard && git clean -dfx'
-alias gcm='git checkout main'
+
+function gcm() {
+  if git rev-parse --quiet --verify main > /dev/null; then
+    git checkout main
+  else
+    git checkout master
+  fi
+}
+
+# alias gcm='git checkout main'
 alias gcd='git checkout develop'
 alias gcmsg='git commit -m'
 alias gco='git checkout'
