@@ -9,9 +9,6 @@ alias ios-record="xcrun simctl io booted recordVideo"
 
 alias cl="printf '\33c\e[3J'"
 
-# Vagrant aliases
-source ~/.shell/vagrant_aliases.sh
-
 # Git aliases
 source ~/.shell/git_aliases.sh
 

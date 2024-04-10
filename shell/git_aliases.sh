@@ -111,13 +111,32 @@ alias gpristine='git reset --hard && git clean -dfx'
 function gcm() {
   if git rev-parse --quiet --verify main > /dev/null; then
     git checkout main
-  else
+  elif git rev-parse --quiet --verify master > /dev/null; then
     git checkout master
+  elif git rev-parse --quiet --verify prod > /dev/null; then
+    git checkout prod
+  elif git rev-parse --quiet --verify production > /dev/null; then
+    git checkout production
+  else
+    echo "No main branch found"
   fi
 }
 
 # alias gcm='git checkout main'
-alias gcd='git checkout develop'
+
+function gcd() {
+  if git rev-parse --quiet --verify develop > /dev/null; then
+    git checkout develop
+  elif git rev-parse --quiet --verify dev > /dev/null; then
+    git checkout dev
+  elif git rev-parse --quiet --verify development > /dev/null; then
+    git checkout development
+  else
+    echo "No develop branch found"
+  fi
+}
+
+# alias gcd='git checkout develop'
 alias gcmsg='git commit -m'
 alias gco='git checkout'
 alias gcount='git shortlog -sn'
