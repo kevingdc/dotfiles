@@ -7,6 +7,8 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
 # export PATH="$PATH:$(yarn global bin)"
 
 if (( $+commands[pyenv] )); then
