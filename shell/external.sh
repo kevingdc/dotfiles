@@ -19,7 +19,9 @@ fi
 
 
 # Secrets
-source ~/.secrets/secrets.sh
+if [ -f ~/.secrets/secrets.sh ]; then
+  source ~/.secrets/secrets.sh
+fi
 
 if (( $+commands[direnv] )); then
   eval "$(direnv hook zsh)"
