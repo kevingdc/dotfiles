@@ -6,10 +6,14 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:~/.zig
+export PATH=$PATH:~/.jetzig
+export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin
 
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
-# export PATH="$PATH:$(yarn global bin)"
+export PIPENV_VENV_IN_PROJECT=1
 
 if (( $+commands[pyenv] )); then
   eval "$(pyenv init -)"
@@ -26,3 +30,5 @@ fi
 if (( $+commands[direnv] )); then
   eval "$(direnv hook zsh)"
 fi
+
+source "$HOME/.cargo/env"

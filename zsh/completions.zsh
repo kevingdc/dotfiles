@@ -1,2 +1,2 @@
-fpath+=~/.zsh/completions/fnm.zsh
+fpath+=~/.zsh/completions/mise.zsh
 compinit

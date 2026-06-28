@@ -3,7 +3,7 @@
       create: true
       relink: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     ~/.gitconfig:
@@ -15,3 +15,4 @@
     ~/.zshrc:
     ~/.tmux.conf:
     ~/.config/starship.toml: starship.toml
+    ~/.config/ghostty/config: ghostty

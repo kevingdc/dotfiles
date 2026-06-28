@@ -80,10 +80,11 @@ alias gap='git apply'
 
 alias gb='git branch'
 alias gba='git branch -a'
-alias gbd='git branch -d'
-alias gbda='git branch --no-color --merged | command grep -vE "^(\+|\*|\s*(master|main|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
+alias gbd='git branch -D'
+# alias gbda='git branch --no-color --merged | command grep -vE "^(\+|\*|\s*(master|main|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
+alias gbda='git fetch -p && git branch -vv | grep ": gone]" | awk "{print \$1}" | xargs git branch -D'
 alias gbD='git branch -D'
-alias gbDa='git branch |  command grep -vE "^(\+|\*|\s*(master|main|develop|dev)\s*$)" | command xargs -n 1 git branch -D'
+# alias gbDa='git branch |  command grep -vE "^(\+|\*|\s*(master|main|develop|dev)\s*$)" | command xargs -n 1 git branch -D'
 alias gbl='git blame -b -w'
 alias gbnm='git branch --no-merged'
 alias gbr='git branch --remote'
@@ -295,7 +296,7 @@ autoload -Uz is-at-least
 is-at-least 2.13 "$(git --version 2>/dev/null | awk '{print $3}')" \
     && alias gsta='git stash push' \
     || alias gsta='git stash save'
-
+alias gstap='git stash push --staged'
 alias gstaa='git stash apply'
 alias gstc='git stash clear'
 alias gstd='git stash drop'
@@ -321,3 +322,13 @@ alias glum='git pull upstream main'
 
 alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m "--wip-- [skip ci]"'
+
+alias gctp='gc && gpsup'
+function gsquash() {
+    if [[ -z "$1" ]]; then
+        echo "Usage: gsquash <base_branch>"
+        return 1
+    fi
+    git reset --soft "$(git merge-base "$1" HEAD)"
+    echo "Successfully squashed current branch."
+}

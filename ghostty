@@ -1,0 +1,7 @@
+theme = Gruvbox Dark Hard
+
+font-family = Lekton Nerd Font
+font-size = 15
+
+# keybind = cmd+backspace=esc:w
+keybind = cmd+backspace=text:\x15
