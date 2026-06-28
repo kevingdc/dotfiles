@@ -6,4 +6,4 @@ eval "$(mise activate zsh)"
 export MISE_POETRY_VENV_AUTO=1
 
 # Atuin
-echo 'eval "$(atuin init zsh)"' >> ~/.zshrc
+eval "$(atuin init zsh)"
